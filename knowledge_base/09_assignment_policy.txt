@@ -1,0 +1,133 @@
+ASSIGNMENT & PROJECT POLICY
+B.Tech CSCE Program | KIIT University | 2023-2027 Batch
+Academic Affairs Division
+============================================================
+
+1. ASSIGNMENT OVERVIEW
+
+Each theory subject in a semester will have:
+  - Minimum 2 individual assignments
+  - 1 group project/mini-project (for Semester 3+ subjects)
+  - Assignment marks contribute to Internal Assessment (10 out of 40 marks).
+
+Assignment components in internal marks (40 total):
+  - Mid Semester Exam: 20 marks
+  - Class Test / Surprise Quiz: 10 marks
+  - Assignments (including viva): 10 marks
+
+2. ASSIGNMENT DEADLINES
+
+GENERAL RULES:
+  - Each assignment deadline is announced in class and posted on the subject's ERP section.
+  - Standard submission window: Assignments are due within 10 days of being assigned.
+  - Hard deadline: Date and time mentioned on the assignment sheet; usually end of that day (11:59 PM for digital submissions).
+
+SUBMISSION METHODS:
+  a. Digital Submission (primary): Upload to KIIT ERP portal (erp.kiit.ac.in) → Student Zone → Subject → Assignments.
+  b. Physical Submission (if specified by faculty): Printed copy submitted to faculty during class or in faculty cabin.
+  c. Email submission: Only if ERP is down and faculty explicitly permits.
+
+LATE SUBMISSION POLICY:
+  ┌──────────────────────────────────────────────────────────┐
+  │ Days Late         │ Penalty                              │
+  ├───────────────────┼──────────────────────────────────────┤
+  │ 0 days (on time)  │ Full marks (10/10)                   │
+  │ 1–2 days late     │ 20% deduction (max 8/10)             │
+  │ 3–5 days late     │ 50% deduction (max 5/10)             │
+  │ More than 5 days  │ Zero marks (0/10), accepted for ref. │
+  └──────────────────────────────────────────────────────────┘
+
+EXCEPTIONS: Late submissions may be accepted without penalty for:
+  - Medical emergency (with valid medical certificate submitted within 3 days).
+  - Death in family (leave letter with HOD approval).
+  - University-level events (sports, cultural competitions with faculty advisor letter).
+  Note: Exceptions NOT granted retroactively; inform faculty BEFORE deadline.
+
+3. PLAGIARISM POLICY
+
+DEFINITION: Plagiarism includes:
+  - Copying another student's assignment verbatim.
+  - Directly copying from internet without citation or modification.
+  - Using AI-generated text and presenting it as own work (without disclosure).
+  - Submitting same work for multiple subjects (self-plagiarism).
+  - Paraphrasing source without proper attribution.
+
+PLAGIARISM DETECTION:
+  - Assignments are checked using Turnitin or similar tools.
+  - Acceptable similarity threshold: ≤ 25% for written reports.
+  - Code assignments checked using MOSS (Measure of Software Similarity).
+
+PENALTIES FOR PLAGIARISM:
+  Level 1 (25–50% similarity): Warning + forced resubmission; max marks = 5/10.
+  Level 2 (50–75% similarity): Zero in that assignment; formal warning letter.
+  Level 3 (> 75% / exact copy): Zero in entire internal component; case referred to HOD.
+  Repeat offense: Referred to Examination Disciplinary Committee; may lead to F grade.
+
+4. GROUP PROJECT POLICY
+
+GROUP FORMATION:
+  - Groups of 3–4 students formed at the start of the project.
+  - Group composition must be approved by the faculty within Week 2.
+  - Students cannot change groups without faculty approval.
+
+PROJECT TIMELINE:
+  - Topic finalization & proposal: Week 3–4
+  - Mid-project review / prototype demo: Week 9–10
+  - Final submission of report: Week 14–15
+  - Final presentation/viva: Week 15–16
+
+REPORT FORMAT REQUIREMENTS:
+  - Cover page: Title, Group members (name + roll number), subject, date.
+  - Minimum pages: 10–15 pages (excluding code).
+  - Sections: Introduction, Literature Review, Methodology, Implementation, Results, Conclusion, References.
+  - Referencing style: IEEE format.
+  - Font: Times New Roman or Arial, 12pt, 1.5 line spacing, 1-inch margins.
+  - File format: PDF preferred.
+
+MARKS DISTRIBUTION FOR GROUP PROJECT (30 marks total):
+  - Report quality: 10 marks
+  - Implementation/Demo: 12 marks
+  - Viva/Presentation: 8 marks
+  Individual contribution may be assessed separately by faculty.
+
+5. CAPSTONE PROJECT (Semester 7–8)
+
+MAJOR PROJECT RULES:
+  - Groups of 3–5 students (must be from same batch/branch).
+  - Project runs over two semesters (Part I: Sem 7, Part II: Sem 8).
+  - Each student must make identifiable individual contributions.
+  - Plagiarism check on final project report: ≤ 15% similarity required.
+  - Code must be original and submitted with git history.
+  - Project must be hosted on GitHub (private or public).
+
+DELIVERABLES — Final Capstone (Part II):
+  - Working software/system
+  - Complete source code on GitHub
+  - Technical documentation (20–30 pages)
+  - Research paper draft (IEEE format)
+  - Final presentation to panel
+  - Video demo (5–10 minutes)
+
+6. CODE ASSIGNMENT GUIDELINES
+
+PROGRAMMING ASSIGNMENTS:
+  - Must be written by the student alone (unless group assignment).
+  - Comments are mandatory; uncommented code will lose up to 20% marks.
+  - Test cases must be included in submission.
+  - Hard-coded inputs are not acceptable unless specified.
+  - Language must match the subject requirement (e.g., C for DS Lab, Java for OOP Lab).
+
+VERSION CONTROL:
+  - From Semester 3 onward, students are encouraged to use git and GitHub.
+  - Faculty may check commit history to verify individual work.
+
+7. ACADEMIC INTEGRITY PLEDGE
+
+All students are expected to uphold academic integrity:
+  - Do your own work.
+  - Cite all sources (papers, websites, books, tools).
+  - Do not share your assignment files with other students.
+  - Do not accept someone else's solutions.
+  - If in doubt about AI tool use, check with faculty first.
+
+Violation of academic integrity rules is treated seriously under the KIIT University Code of Conduct and can result in suspension or expulsion in severe cases.

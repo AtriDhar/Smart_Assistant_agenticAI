@@ -1,0 +1,117 @@
+UNIT 1 NOTES — DATA STRUCTURES & ALGORITHMS
+Subject Code: CS3001 | Semester 3 | 4 Credits
+KIIT University — B.Tech CSCE 2023-2027
+============================================================
+
+UNIT 1: LINEAR DATA STRUCTURES
+
+1. ARRAYS
+- A collection of elements stored in contiguous memory locations.
+- Supports O(1) random access using index.
+- Insertion/Deletion at end: O(1); at middle: O(n).
+- Static (fixed size) vs Dynamic arrays (resizable, e.g., ArrayList in Java).
+- 2D Arrays: used for matrix operations, graph adjacency matrix.
+
+2. LINKED LISTS
+- Nodes connected via pointers; dynamic size.
+Types:
+  a. Singly Linked List: each node points to next.
+  b. Doubly Linked List: each node has next and prev pointers.
+  c. Circular Linked List: last node points back to head.
+- Insertion at head: O(1); at tail: O(n) for singly, O(1) with tail pointer.
+- Search: O(n). No random access.
+- Applications: Undo/Redo, browser history, music playlist.
+
+3. STACKS
+- LIFO (Last In, First Out) structure.
+- Operations: push() O(1), pop() O(1), peek() O(1), isEmpty() O(1).
+- Implementations: Array-based, Linked List-based.
+- Applications:
+  - Function call stack (activation records)
+  - Expression evaluation (infix to postfix)
+  - Balanced parentheses checking
+  - Browser back button
+
+4. QUEUES
+- FIFO (First In, First Out) structure.
+- Operations: enqueue() O(1), dequeue() O(1), front() O(1).
+Types:
+  a. Simple Queue
+  b. Circular Queue: solves the "false overflow" problem.
+  c. Priority Queue: elements served by priority.
+  d. Deque (Double-Ended Queue): insert/delete from both ends.
+- Applications: CPU scheduling, printer spooling, BFS traversal.
+
+UNIT 2: NON-LINEAR DATA STRUCTURES
+
+5. TREES
+- Hierarchical structure with root, parent, child, leaf nodes.
+Key Terms: Height, Depth, Degree, Level.
+
+a. Binary Tree: each node has at most 2 children.
+b. Binary Search Tree (BST):
+   - Left subtree < root < Right subtree.
+   - Search/Insert/Delete: O(log n) average, O(n) worst case (skewed).
+c. AVL Tree (Self-Balancing BST):
+   - Balance factor = height(left) - height(right) ∈ {-1, 0, 1}.
+   - Rotations: LL, RR, LR, RL.
+   - All operations: O(log n) guaranteed.
+d. Heap:
+   - Max-Heap: parent ≥ children (used in ascending sort).
+   - Min-Heap: parent ≤ children.
+   - Build heap: O(n). Insert/Delete: O(log n).
+   - Heap Sort: O(n log n), in-place, not stable.
+e. B-Tree:
+   - Balanced, multi-way search tree.
+   - Used in databases and file systems.
+   - All leaves at same level.
+f. Trie (Prefix Tree):
+   - Used for string operations, autocomplete.
+   - Search/Insert: O(L) where L = length of string.
+
+6. GRAPHS
+- Set of vertices (V) and edges (E).
+Types:
+  - Directed (Digraph) vs Undirected
+  - Weighted vs Unweighted
+  - Cyclic vs Acyclic (DAG — Directed Acyclic Graph)
+Representations:
+  a. Adjacency Matrix: O(V²) space; O(1) edge lookup.
+  b. Adjacency List: O(V+E) space; efficient for sparse graphs.
+Graph Traversals:
+  a. BFS (Breadth-First Search): O(V+E); uses Queue; finds shortest path in unweighted graph.
+  b. DFS (Depth-First Search): O(V+E); uses Stack/Recursion; detects cycles.
+Algorithms:
+  - Dijkstra's Algorithm: Single-source shortest path (non-negative weights), O((V+E) log V) with min-heap.
+  - Bellman-Ford: Handles negative weights, O(VE).
+  - Floyd-Warshall: All-pairs shortest path, O(V³).
+  - Kruskal's MST: O(E log E); uses Union-Find.
+  - Prim's MST: O((V+E) log V) with priority queue.
+  - Topological Sort: For DAGs; used in scheduling.
+
+UNIT 3: SORTING & SEARCHING ALGORITHMS
+
+7. SORTING ALGORITHMS
+a. Bubble Sort: O(n²) worst/avg; O(n) best (optimized); stable; in-place.
+b. Selection Sort: O(n²) all cases; not stable; in-place.
+c. Insertion Sort: O(n²) worst; O(n) best; stable; good for nearly sorted data.
+d. Merge Sort: O(n log n) all cases; stable; NOT in-place (O(n) extra space).
+e. Quick Sort: O(n log n) avg; O(n²) worst (bad pivot); in-place; NOT stable.
+   - Pivot selection: first, last, median, random.
+f. Heap Sort: O(n log n) all cases; in-place; NOT stable.
+g. Counting Sort: O(n+k); not comparison-based; stable; for integer keys.
+h. Radix Sort: O(nk); stable; for fixed-width integers/strings.
+
+8. SEARCHING ALGORITHMS
+a. Linear Search: O(n); works on unsorted data.
+b. Binary Search: O(log n); requires sorted array; divide-and-conquer.
+c. Interpolation Search: O(log log n) average for uniformly distributed data.
+
+IMPORTANT EXAM TOPICS (frequently asked):
+- Derive time complexity of recursive algorithms using recurrence relations.
+- T(n) = 2T(n/2) + n → O(n log n) [Master Theorem: Case 2]
+- T(n) = T(n-1) + n → O(n²)
+- AVL rotations with examples.
+- Dijkstra's algorithm step-by-step.
+- Comparison table of all sorting algorithms.
+- Implement stack using two queues and queue using two stacks.

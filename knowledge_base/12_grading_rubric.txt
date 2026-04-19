@@ -1,0 +1,145 @@
+GRADING RUBRIC & MARKS DISTRIBUTION
+B.Tech CSCE Program | KIIT University | 2023-2027 Batch
+Academic Regulations — Examination Division
+============================================================
+
+1. MARKS DISTRIBUTION PER SUBJECT
+
+THEORY SUBJECTS (100 Marks Total):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Component                          Max Marks
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+INTERNAL ASSESSMENT (40 Marks):
+  Mid Semester Examination (MSE)      20
+  Class Test / Surprise Quiz          10
+  Assignments / Viva                  10
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+END SEMESTER EXAMINATION (60 Marks)   60
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTAL                                100
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+LAB / PRACTICAL SUBJECTS (50 Marks Total):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Component                          Max Marks
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Continuous Evaluation (Lab Work)       30
+End Practical Examination              20
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTAL                                  50
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. GRADING SCALE (10-Point System)
+
+KIIT University follows a 10-point absolute grading system.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Grade  Grade Point  Marks Range (out of 100)  Performance
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  O       10           90 – 100               Outstanding
+  E        9           80 – 89                Excellent
+  A        8           70 – 79                Very Good
+  B        7           60 – 69                Good
+  C        6           50 – 59                Average
+  D        5           45 – 49                Satisfactory
+  F        0           Below 45               Fail
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOTE: 'F' grade = FAIL. The subject must be repeated or supplementary exam taken.
+
+3. PASSING CRITERIA
+
+To pass a subject, a student must satisfy BOTH:
+  Condition 1: Minimum 40 marks out of 60 in End Semester Examination.
+  Condition 2: Minimum 45 marks out of 100 in total (Internal + ESE).
+
+Failing Condition 1 alone → FAIL (even if overall ≥ 45).
+Failing Condition 2 alone → FAIL (even if ESE ≥ 40).
+Both conditions must be satisfied simultaneously.
+
+For Lab subjects: Minimum 20 out of 50 required to pass.
+
+4. SGPA CALCULATION (Semester Grade Point Average)
+
+Formula: SGPA = Σ(Credit_i × GradePoint_i) / Σ(Credit_i)
+
+Where i runs over all subjects in the semester.
+
+Example (Semester 3):
+Subject           Credits  Grade  GP   Credits × GP
+Data Structures      4       B    7      28
+Operating Systems    3       A    8      24
+DBMS                 3       E    9      27
+Discrete Math        3       B    7      21
+DS Lab               2       O   10      20
+OS Lab               2       A    8      16
+Total Credits       17                  136
+
+SGPA = 136 / 17 = 8.0
+
+5. CGPA CALCULATION (Cumulative Grade Point Average)
+
+CGPA = Σ(Credits × GradePoints for ALL completed semesters) / Total Credits completed.
+
+CGPA is calculated after each semester and updated on the grade card.
+
+CGPA to Percentage Conversion (as per KIIT norms):
+  Percentage = (CGPA − 0.5) × 10
+  Example: CGPA 8.0 → (8.0 − 0.5) × 10 = 75%
+
+6. GRADE CATEGORIES FOR PLACEMENT & SCHOLARSHIPS
+
+  CGPA ≥ 9.0: Chancellor's Award eligible; top merit scholarship.
+  CGPA ≥ 8.5: Dean's List; merit scholarship eligible.
+  CGPA ≥ 7.5: Distinction in final certificate.
+  CGPA ≥ 6.5: Eligible for most campus placement opportunities.
+  CGPA ≥ 5.0: Eligible for supplementary advantages; some roles may require waiver.
+  CGPA < 5.0: Academic probation; counseling mandatory.
+
+7. BACK PAPER POLICY
+
+If a student fails a subject (gets F grade):
+  a. Supplementary Exam: Held within 4–6 weeks of result.
+     - Internal marks of original semester retained.
+     - Only external exam (60 marks) re-taken.
+     - Maximum grade achievable in supplementary: D (5 grade points).
+  b. If supplementary also failed: Subject appears as back paper in a future semester.
+  c. Maximum back papers allowed: 4 per semester; if exceeded, student may be detained.
+
+IMPORTANT: Even if a student passes via supplementary, the 'F' grade does NOT appear on the transcript if cleared. The new grade replaces it.
+
+8. GRACE MARKS POLICY
+
+  - Up to 5 grace marks may be awarded in a subject at the university's discretion.
+  - Grace marks may help push a student from 'F' to 'D' (44 → 45 with grace = pass).
+  - Grace marks are awarded sparingly; NOT guaranteed.
+  - Grace marks are typically applied to End Semester Exam marks only.
+
+9. HONORS / DISTINCTION CRITERIA
+
+For Final Degree Classification:
+  - First Class with Distinction: CGPA ≥ 7.5
+  - First Class: CGPA ≥ 6.5
+  - Second Class: CGPA ≥ 5.5
+  - Pass Class: CGPA ≥ 5.0
+
+  Note: No back papers in final two semesters required for Distinction.
+
+10. INTERNAL MARKS TRANSPARENCY
+
+Each faculty must:
+  - Display internal marks on the Department Notice Board before ESE.
+  - Provide opportunity for students to review their Mid Sem answer scripts.
+  - Students can dispute internal marks within 7 days of display.
+  - Disputes escalated to HOD if faculty cannot resolve.
+
+11. SUBJECT-SPECIFIC MARK BREAKUP (Mid Sem Exam Pattern)
+
+Mid Sem Exam (20 Marks):
+  Section A: Short Questions (4 × 2 = 8 marks): All compulsory.
+  Section B: Medium Questions (choose 2 from 3, 6 marks each = 12 marks).
+
+End Sem Exam (60 Marks):
+  Section A: Very Short / MCQ (10 × 2 = 20 marks): All compulsory.
+  Section B: Medium (choose 4 from 6, 5 marks each = 20 marks).
+  Section C: Long Answers (choose 2 from 4, 10 marks each = 20 marks).

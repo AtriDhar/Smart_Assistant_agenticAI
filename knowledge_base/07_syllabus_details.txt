@@ -1,0 +1,195 @@
+DETAILED SEMESTER SYLLABUS — B.Tech CSCE
+Semester 3 & 4 Focus | KIIT University | 2023-2027 Batch
+============================================================
+
+SEMESTER 3 SUBJECTS & SYLLABI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUBJECT: Data Structures & Algorithms (CS3001)
+Credits: 4 (L-T-P: 3-1-0) | End Semester Marks: 60 | Internal: 40
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 1: Introduction & Linear Data Structures (8 hours)
+  - Introduction to data structures; abstract data types (ADT)
+  - Arrays: types, operations, 2D arrays
+  - Linked Lists: singly, doubly, circular; operations
+  - Stack: array/linked list implementation; applications
+  - Queue: simple, circular, priority, deque; applications
+
+MODULE 2: Non-Linear Data Structures — Trees (10 hours)
+  - Binary Trees: properties, traversals (inorder, preorder, postorder)
+  - Binary Search Tree (BST): search, insert, delete
+  - AVL Trees: balance factor, rotations (LL, RR, LR, RL)
+  - Heap: min-heap, max-heap; heapify; priority queue
+  - B-Trees and B+ Trees: order, insert, delete
+  - Trie: insert, search; applications in autocomplete
+
+MODULE 3: Graphs (8 hours)
+  - Graph terminology; directed and undirected graphs
+  - Representations: adjacency matrix, adjacency list
+  - BFS and DFS: traversal, applications, complexity
+  - Shortest Paths: Dijkstra's, Bellman-Ford, Floyd-Warshall
+  - Minimum Spanning Tree: Kruskal's, Prim's algorithms
+  - Topological Sorting; Strongly Connected Components
+
+MODULE 4: Sorting & Searching (6 hours)
+  - Bubble, Selection, Insertion Sort: O(n²)
+  - Merge Sort, Quick Sort: O(n log n)
+  - Heap Sort: O(n log n)
+  - Radix Sort, Counting Sort: O(nk)
+  - Binary Search, Interpolation Search
+  - Comparison of sorting algorithms
+
+MODULE 5: Hashing & Advanced Topics (8 hours)
+  - Hash Functions: division, multiplication, universal hashing
+  - Collision Resolution: separate chaining, open addressing (linear, quadratic, double hashing)
+  - Dynamic Programming: Memoization vs. Tabulation; 0/1 Knapsack, LCS, LIS
+  - Greedy Algorithms: Activity Selection, Huffman Coding
+  - Backtracking: N-Queens, Sudoku Solver
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUBJECT: Operating Systems (CS3003)
+Credits: 3 (L-T-P: 3-0-0) | End Semester Marks: 60 | Internal: 40
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 1: OS Introduction & Process Management (8 hours)
+  - OS structure, types, functions; system calls
+  - Process: concept, states, PCB; context switching
+  - Process creation (fork, exec); process hierarchy
+  - Inter-process Communication: shared memory, message passing, pipes, semaphores
+
+MODULE 2: CPU Scheduling & Synchronization (10 hours)
+  - Scheduling criteria; preemptive vs non-preemptive
+  - FCFS, SJF, SRTF, Priority, Round Robin, Multilevel Queue, MLFQ
+  - Scheduling problems and Gantt chart analysis
+  - Critical section; Peterson's solution; mutex; semaphores
+  - Classical problems: Producer-Consumer, Reader-Writer, Dining Philosophers
+  - Monitors; condition variables
+
+MODULE 3: Deadlock (6 hours)
+  - Deadlock conditions (Coffman's conditions)
+  - Resource Allocation Graph (RAG)
+  - Prevention, Avoidance (Banker's Algorithm), Detection, Recovery
+
+MODULE 4: Memory Management (10 hours)
+  - Contiguous allocation; fragmentation types
+  - Paging: page table, TLB, multi-level paging
+  - Segmentation; combined paging and segmentation
+  - Virtual memory: demand paging, page fault, page replacement
+  - FIFO, Optimal, LRU, LFU; Belady's Anomaly
+  - Thrashing; working set model
+
+MODULE 5: File Systems & I/O (6 hours)
+  - File concept; attributes; operations; access methods
+  - Directory structure; mounting
+  - File allocation: contiguous, linked, indexed (inode)
+  - Disk scheduling: FCFS, SSTF, SCAN, C-SCAN, LOOK
+  - I/O hardware; DMA; device drivers
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUBJECT: Database Management Systems (CS3005)
+Credits: 3 (L-T-P: 3-0-0) | End Semester Marks: 60 | Internal: 40
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 1: Introduction & ER Model (6 hours)
+  - DBMS vs file system; database concepts; DBA role
+  - ER Model: entities, attributes, relationships; ER diagram
+  - Converting ER to relational schema
+
+MODULE 2: Relational Model & SQL (12 hours)
+  - Relational algebra; tuple & domain relational calculus
+  - SQL: DDL, DML, DCL; constraints; joins; subqueries
+  - Aggregate functions; views; indexes; stored procedures; triggers
+  - Advanced SQL: window functions, CTEs, recursive queries
+
+MODULE 3: Normalization (8 hours)
+  - Functional dependencies; Armstrong's axioms
+  - Closure; candidate keys; minimal cover
+  - 1NF, 2NF, 3NF, BCNF, 4NF, 5NF
+  - Decomposition: lossless join, dependency preservation
+
+MODULE 4: Transactions & Concurrency (8 hours)
+  - ACID properties; transaction states
+  - Serializability; conflict and view serializability
+  - Locking: shared/exclusive; two-phase locking (2PL)
+  - Deadlock in transactions; timestamp-based protocols
+  - Isolation levels; MVCC
+
+MODULE 5: Advanced Topics (6 hours)
+  - Query processing and optimization; cost estimation
+  - Indexing: B+ tree, hash indexes; dense vs sparse
+  - NoSQL databases: types; CAP theorem; BASE properties
+  - Distributed databases; data warehousing; OLAP vs OLTP
+
+SEMESTER 4 SUBJECTS & SYLLABI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUBJECT: Computer Networks (CS4001)
+Credits: 3 (L-T-P: 3-0-0) | End Semester Marks: 60 | Internal: 40
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 1: Network Fundamentals (8 hours)
+  - Network models: OSI (7 layers) and TCP/IP (4 layers)
+  - Data transmission: analog vs digital; Nyquist, Shannon theorem
+  - Guided media: twisted pair, coaxial, fiber optic
+  - Unguided media: radio, microwave, infrared
+  - Multiplexing: FDM, TDM, WDM, CDM
+
+MODULE 2: Data Link & MAC Layer (10 hours)
+  - Framing; error detection: parity, CRC, checksum
+  - Error correction: Hamming code
+  - ARQ protocols: Stop-and-Wait, Go-Back-N, Selective Repeat
+  - MAC protocols: ALOHA, CSMA/CD, CSMA/CA, Token Ring
+  - Ethernet (802.3), Wi-Fi (802.11); switching; VLANs
+
+MODULE 3: Network Layer (10 hours)
+  - IPv4 addressing; subnetting; CIDR; VLSM
+  - IPv6: features, address format, migration
+  - Routing: Distance Vector (RIP), Link State (OSPF), BGP
+  - IP header; fragmentation; ARP, RARP, ICMP, DHCP, NAT
+
+MODULE 4: Transport Layer (6 hours)
+  - TCP: connection (3-way handshake), flow control (sliding window), congestion control
+  - UDP: uses and characteristics
+  - Port numbers; socket programming concepts
+
+MODULE 5: Application Layer (6 hours)
+  - DNS: hierarchy, recursive vs iterative resolution
+  - HTTP/HTTPS; FTP; SMTP; POP3; IMAP; SSH; Telnet
+  - Network security: firewalls, VPN, TLS/SSL, IPsec
+  - Emerging topics: SDN, NFV, 5G network architecture
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUBJECT: Software Engineering (CS4003)
+Credits: 3 (L-T-P: 3-0-0) | End Semester Marks: 60 | Internal: 40
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MODULE 1: Software Process Models (8 hours)
+  - Software processes; lifecycle; SDLC; Waterfall, V-model
+  - Incremental, Spiral, RAD models
+  - Agile: principles; Scrum, Kanban, XP; DevOps
+
+MODULE 2: Requirement Engineering (8 hours)
+  - Types of requirements (functional, non-functional)
+  - Elicitation techniques; user stories; use cases
+  - SRS document (IEEE 830); validation techniques
+  - Requirements management; traceability
+
+MODULE 3: Software Design (10 hours)
+  - Design principles; modularity; coupling and cohesion
+  - Architecture patterns: MVC, microservices, layered
+  - UML diagrams: class, sequence, use case, activity, state machine, component
+  - Design patterns: Gang of Four (Creational, Structural, Behavioral)
+
+MODULE 4: Software Testing (8 hours)
+  - Verification vs Validation; testing levels (unit, integration, system, acceptance)
+  - Black-box: equivalence partitioning, BVA; White-box: path coverage
+  - Test-Driven Development (TDD); Continuous Integration
+  - Performance, security, regression testing
+
+MODULE 5: Software Quality & Project Management (6 hours)
+  - COCOMO model; Function Point Analysis
+  - Risk management; WBS; Gantt charts; CPM/PERT
+  - SQA; ISO 9001; CMMI levels; code metrics
+  - Software maintenance: types; re-engineering; legacy systems
+
+EXAM SCHEDULE NOTES:
+- Mid Semester Exam (MSE): Approximately Week 8 of semester
+- End Semester Exam (ESE): After Week 16 (final exam week)
+- Practical Exam: Conducted during last two weeks of semester
+- Supplementary Exam: Within 4 weeks of result declaration

@@ -1,0 +1,122 @@
+COURSE OVERVIEW — B.Tech Computer Science and Computer Engineering (CSCE)
+KIIT University, Bhubaneswar, Odisha
+========================================================================
+
+PROGRAM: Bachelor of Technology in Computer Science and Computer Engineering (CSCE)
+DURATION: 4 Years (8 Semesters)
+CURRENT BATCH: 2023–2027
+SCHOOL: School of Computer Engineering, KIIT University
+
+ACCREDITATION & RECOGNITION:
+- NAAC A++ accredited institution
+- NBA accredited programs
+- Ranked among top 10 private universities in India (NIRF 2024)
+- UGC recognized, AICTE approved
+
+TOTAL CREDITS FOR GRADUATION: 160
+  - Core Theory Credits: 90
+  - Core Lab Credits: 24
+  - Elective Credits: 24 (Open: 12, Professional: 12)
+  - Project / Internship Credits: 22
+
+SEMESTER-WISE SUBJECTS:
+
+Semester 1:
+- Mathematics–I (Calculus & Linear Algebra) — 4 credits
+- Engineering Physics — 3 credits
+- Programming in C — 3 credits
+- Engineering Drawing & Graphics — 2 credits
+- Communication Skills in English — 2 credits
+- Physics Lab, C Programming Lab — 2 credits each
+
+Semester 2:
+- Mathematics–II (Probability & Statistics) — 4 credits
+- Engineering Chemistry — 3 credits
+- Object-Oriented Programming with Java — 3 credits
+- Digital Electronics & Logic Design — 3 credits
+- Environmental Science — 2 credits
+- Java Lab, Electronics Lab — 2 credits each
+
+Semester 3:
+- Data Structures & Algorithms — 4 credits
+- Discrete Mathematics — 3 credits
+- Computer Organization & Architecture — 3 credits
+- Operating Systems — 3 credits
+- Database Management Systems — 3 credits
+- DS Lab, OS Lab — 2 credits each
+
+Semester 4:
+- Design & Analysis of Algorithms — 4 credits
+- Microprocessor & Microcontroller — 3 credits
+- Computer Networks — 3 credits
+- Software Engineering — 3 credits
+- Theory of Computation — 3 credits
+- Networks Lab, SE Lab — 2 credits each
+
+Semester 5:
+- Artificial Intelligence — 3 credits
+- Machine Learning — 3 credits
+- Web Technologies — 3 credits
+- Cloud Computing — 3 credits
+- Open Elective–I — 3 credits
+- ML Lab, Web Lab — 2 credits each
+
+Semester 6:
+- Big Data Analytics — 3 credits
+- Cybersecurity & Ethical Hacking — 3 credits
+- Mobile Application Development — 3 credits
+- Open Elective–II — 3 credits
+- Minor Project — 4 credits
+
+Semester 7:
+- Deep Learning — 3 credits
+- Blockchain Technology — 3 credits
+- Professional Elective–I — 3 credits
+- Professional Elective–II — 3 credits
+- Major Project Part–I — 6 credits
+
+Semester 8:
+- Internet of Things (IoT) — 3 credits
+- Professional Elective–III — 3 credits
+- Industry Internship (minimum 6 months) — 6 credits
+- Major Project Part–II — 6 credits
+
+PROGRAM EDUCATIONAL OBJECTIVES (PEOs):
+PEO-1: Graduates will apply technical knowledge to solve real-world computational problems.
+PEO-2: Graduates will design and develop software systems meeting industry standards.
+PEO-3: Graduates will demonstrate professional ethics, teamwork, and leadership.
+PEO-4: Graduates will engage in lifelong learning and adapt to emerging technologies.
+
+PROGRAM OUTCOMES (POs):
+PO1: Engineering Knowledge
+PO2: Problem Analysis
+PO3: Design/Development of Solutions
+PO4: Investigation and Research
+PO5: Use of Modern Engineering Tools
+PO6: Engineer & Society
+PO7: Environment & Sustainability
+PO8: Ethics
+PO9: Individual & Team Work
+PO10: Communication
+PO11: Project Management & Finance
+PO12: Lifelong Learning
+
+ATTENDANCE POLICY:
+- Minimum 75% attendance is mandatory in every subject.
+- Students below 75% may be debarred from end-semester exams.
+- Medical condonation allowed up to 10% with supporting documents.
+- Attendance is tracked through biometric and manual registers.
+
+TEACHING METHODOLOGY:
+- Theory: 3–4 lectures per week per subject
+- Labs: 2–3 hours per week per lab
+- Industry experts as visiting faculty
+- Project-based learning from Semester 5 onward
+- International student exchange programs available
+
+FACILITIES:
+- Central Library: IEEE, Springer, Elsevier, ACM Digital Library access
+- GPU Computing Lab for AI/ML courses
+- High-speed Wi-Fi (1 Gbps backbone) across campus
+- KIIT Technology Business Incubator (KIIT-TBI)
+- 25+ international partner universities for exchange

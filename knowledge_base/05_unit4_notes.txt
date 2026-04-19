@@ -1,0 +1,122 @@
+UNIT 4 NOTES — COMPUTER NETWORKS
+Subject Code: CS4001 | Semester 4 | 3 Credits
+KIIT University — B.Tech CSCE 2023-2027
+============================================================
+
+1. INTRODUCTION TO NETWORKS
+- Computer Network: Two or more devices connected to share resources.
+- Types: PAN, LAN, MAN, WAN, Internet.
+- Network Topologies: Bus, Star, Ring, Mesh, Hybrid.
+- Network Devices: Hub, Switch, Router, Bridge, Gateway, Repeater, Modem.
+
+2. OSI MODEL (Open Systems Interconnection)
+7-Layer Reference Model (top to bottom):
+
+Layer 7 — Application: HTTP, FTP, SMTP, DNS, Telnet; user interface.
+Layer 6 — Presentation: Encryption, compression, data format (JPEG, ASCII, SSL/TLS).
+Layer 5 — Session: Session establishment, maintenance, termination; RPC, NetBIOS.
+Layer 4 — Transport: End-to-end delivery; TCP (reliable) and UDP (unreliable); port numbers; segmentation.
+Layer 3 — Network: Logical addressing (IP); routing; routers; IPv4, IPv6.
+Layer 2 — Data Link: Physical addressing (MAC); error detection (CRC); frames; Ethernet, Wi-Fi; switches.
+Layer 1 — Physical: Bits; transmission media (cables, fiber, wireless); encodings.
+
+Mnemonic: "All People Seem To Need Data Processing" (top to bottom)
+Or: "Please Do Not Throw Sausage Pizza Away" (bottom to top)
+
+3. TCP/IP MODEL
+4-Layer model:
+  - Application: HTTP, FTP, DNS, SMTP, DHCP
+  - Transport: TCP, UDP
+  - Internet: IP, ICMP, ARP, RARP
+  - Network Interface: Ethernet, Wi-Fi (802.11)
+
+4. IP ADDRESSING
+
+IPv4:
+- 32-bit address written as 4 octets (e.g., 192.168.1.1).
+- Classes:
+  Class A: 1.0.0.0 – 126.255.255.255 (large networks, 16M hosts)
+  Class B: 128.0.0.0 – 191.255.255.255 (medium, 65K hosts)
+  Class C: 192.0.0.0 – 223.255.255.255 (small, 254 hosts)
+  Class D: Multicast; Class E: Reserved.
+- Private IP ranges: 10.x.x.x, 172.16.x.x – 172.31.x.x, 192.168.x.x.
+- Subnetting: Divide a network; /24 = 255.255.255.0.
+- CIDR (Classless Inter-Domain Routing): 192.168.1.0/24.
+
+IPv6:
+- 128-bit address; hexadecimal notation (e.g., 2001:0db8::1).
+- Solves IPv4 exhaustion; no NAT needed; built-in IPsec.
+
+5. TRANSPORT LAYER PROTOCOLS
+
+TCP (Transmission Control Protocol):
+- Connection-oriented (3-way handshake: SYN, SYN-ACK, ACK).
+- Reliable: acknowledgements, retransmission, in-order delivery.
+- Flow Control: Sliding window protocol.
+- Congestion Control: Slow Start, Congestion Avoidance, Fast Retransmit, Fast Recovery.
+- Connection Termination: 4-way handshake (FIN, ACK, FIN, ACK).
+- Used by: HTTP, HTTPS, FTP, SMTP, SSH.
+
+UDP (User Datagram Protocol):
+- Connectionless; no handshake; best-effort delivery.
+- No reliability, ordering, or flow control.
+- Low overhead, faster than TCP.
+- Used by: DNS, DHCP, VoIP, video streaming, gaming, TFTP.
+
+Port Numbers (important ones):
+  HTTP: 80 | HTTPS: 443 | FTP: 21 | SSH: 22 | SMTP: 25 | DNS: 53
+  DHCP: 67/68 | POP3: 110 | IMAP: 143 | Telnet: 23
+
+6. NETWORK LAYER & ROUTING
+
+IP (Internet Protocol): Best-effort, connectionless, unreliable datagram delivery.
+- IP Header: Version, TTL, Protocol, Source IP, Destination IP, Flags, Fragment Offset.
+
+ARP (Address Resolution Protocol): Resolves IP → MAC address; broadcasts on LAN.
+RARP: MAC → IP (legacy, replaced by DHCP).
+ICMP: Error reporting and diagnostics; used by ping and traceroute.
+DHCP: Dynamically assigns IP, subnet mask, gateway, DNS to hosts.
+DNS: Resolves domain names → IP addresses; hierarchical; root, TLD, authoritative servers.
+
+Routing Algorithms:
+  a. Distance Vector (Bellman-Ford): Each router shares routing table with neighbours; RIP protocol; slow convergence; count-to-infinity problem.
+  b. Link State (Dijkstra): Each router has full network map; OSPF protocol; faster convergence.
+  c. BGP (Border Gateway Protocol): Inter-domain routing; path vector; used on Internet.
+
+7. DATA LINK LAYER
+
+Framing: Start/end delimiters mark frame boundaries.
+Error Detection:
+  - Parity Bit: Single-bit errors.
+  - CRC (Cyclic Redundancy Check): Polynomial division; detects burst errors.
+  - Checksum: Sum of segments; used in TCP/UDP/IP headers.
+Error Correction: Hamming Code; forward error correction.
+
+MAC Protocols (Medium Access Control):
+  - ALOHA: Pure ALOHA (max 18.4% efficiency); Slotted ALOHA (max 36.8%).
+  - CSMA/CD: Carrier Sense Multiple Access / Collision Detection; Ethernet (802.3).
+  - CSMA/CA: Collision Avoidance; Wi-Fi (802.11); uses RTS/CTS.
+  - Token Ring: Token passed; no collision.
+
+Ethernet (IEEE 802.3):
+  - Frame: Preamble, Dest MAC, Src MAC, Type, Data, FCS.
+  - Minimum frame size: 64 bytes; Maximum: 1518 bytes.
+
+Wi-Fi (IEEE 802.11): a/b/g/n/ac/ax (Wi-Fi 6).
+
+8. APPLICATION LAYER PROTOCOLS
+
+HTTP/HTTPS: Stateless; request-response; GET, POST, PUT, DELETE, PATCH; status codes (200 OK, 404 Not Found, 500 Internal Server Error).
+FTP: File transfer; active and passive modes; port 21 (control), 20 (data).
+SMTP/POP3/IMAP: Email protocols.
+SSH: Secure shell; encrypted remote access; port 22.
+TLS/SSL: Encryption layer; certificate-based authentication; HTTPS = HTTP + TLS.
+
+EXAM IMPORTANT TOPICS:
+- OSI vs TCP/IP model comparison.
+- Subnetting calculations and CIDR notation.
+- TCP vs UDP comparison table.
+- 3-way handshake diagram.
+- Routing algorithm step-by-step (Dijkstra, Bellman-Ford).
+- Error detection: CRC polynomial division.
+- MAC protocols and collision handling.

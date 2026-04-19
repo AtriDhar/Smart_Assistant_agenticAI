@@ -1,0 +1,153 @@
+UNIT 5 NOTES — SOFTWARE ENGINEERING
+Subject Code: CS4003 | Semester 4 | 3 Credits
+KIIT University — B.Tech CSCE 2023-2027
+============================================================
+
+1. INTRODUCTION TO SOFTWARE ENGINEERING
+- Software Engineering: Systematic application of engineering principles to software development.
+- Software Crisis (1968): Projects over budget, delayed, poor quality → birth of software engineering as discipline.
+- Software Characteristics: Intangible, does not wear out, complex, malleable.
+- Types of Software: System software, Application software, Web software, Embedded software.
+
+2. SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC)
+
+Phases:
+1. Requirement Analysis: Gather and document user needs; feasibility study.
+2. System Design: High-level (HLD) and Low-level (LLD) design; architecture.
+3. Implementation (Coding): Writing code based on design; programming standards.
+4. Testing: Verify and validate the system.
+5. Deployment: Release to production; installation.
+6. Maintenance: Bug fixes, enhancements, adaptation.
+
+3. SDLC MODELS
+
+a. Waterfall Model:
+   - Linear, sequential phases; no iteration.
+   - Advantages: Simple, easy to manage, documentation-heavy.
+   - Disadvantages: Inflexible to changes; testing late.
+   - Best for: Well-understood, stable requirements.
+
+b. V-Model (Validation & Verification):
+   - Extension of Waterfall; each development phase has a corresponding test phase.
+   - Left side: Development; Right side: Testing.
+   - Advantages: Testing planned early; clear phases.
+
+c. Incremental Model:
+   - System built in increments; each increment adds functionality.
+   - Working software delivered after each cycle.
+   - Good for large projects with changing requirements.
+
+d. Spiral Model (Boehm, 1988):
+   - Combines Waterfall + Prototyping; risk-driven.
+   - 4 quadrants per cycle: Planning, Risk Analysis, Engineering, Evaluation.
+   - Best for large, risk-intensive projects.
+
+e. Agile Model:
+   - Iterative, incremental; working software in short sprints (1–4 weeks).
+   - Principles (Agile Manifesto, 2001):
+     * Individuals and interactions over processes and tools.
+     * Working software over comprehensive documentation.
+     * Customer collaboration over contract negotiation.
+     * Responding to change over following a plan.
+   - Frameworks: Scrum, Kanban, XP (Extreme Programming), SAFe.
+
+f. Scrum Framework:
+   - Roles: Product Owner, Scrum Master, Development Team.
+   - Artifacts: Product Backlog, Sprint Backlog, Increment.
+   - Events: Sprint (2–4 weeks), Sprint Planning, Daily Standup, Sprint Review, Sprint Retrospective.
+
+g. Prototype Model:
+   - Build a working prototype; refine based on feedback.
+   - Good for unclear requirements.
+
+4. REQUIREMENT ENGINEERING
+
+Types of Requirements:
+  - Functional: What the system does (features, operations).
+  - Non-Functional: How the system performs (performance, security, scalability, reliability).
+  - Domain: Requirements from the application domain.
+
+Techniques:
+  - Interviews, Questionnaires, Observation, Use Case Analysis.
+  - User Stories: "As a [user], I want [goal] so that [benefit]."
+
+Software Requirements Specification (SRS): IEEE 830 standard.
+  - Purpose, Product Scope, Requirements (functional + non-functional).
+
+5. SYSTEM DESIGN
+
+Design Principles:
+  - Modularity: Divide system into modules; high cohesion, low coupling.
+  - Abstraction: Hide implementation details.
+  - Information Hiding: Encapsulation.
+  - SOLID Principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
+
+Architecture Patterns:
+  - Layered (N-tier), MVC (Model-View-Controller), Microservices, Event-Driven, Repository.
+
+UML Diagrams:
+  Structural: Class, Object, Component, Deployment, Package.
+  Behavioral: Use Case, Sequence, Activity, State Machine, Collaboration.
+
+Design Patterns (GoF):
+  - Creational: Singleton, Factory, Abstract Factory, Builder, Prototype.
+  - Structural: Adapter, Decorator, Facade, Proxy, Composite.
+  - Behavioral: Observer, Strategy, Command, Iterator, Template Method.
+
+6. SOFTWARE TESTING
+
+V&V (Verification & Validation):
+  - Verification: "Are we building the product right?" (Internal checks).
+  - Validation: "Are we building the right product?" (User acceptance).
+
+Testing Levels:
+  1. Unit Testing: Test individual modules; developer-written; JUnit, PyTest.
+  2. Integration Testing: Test between modules; stubs and drivers.
+  3. System Testing: Test the complete system.
+  4. Acceptance Testing: UAT (User Acceptance Testing) by client.
+  5. Regression Testing: Re-test after changes/fixes.
+
+Testing Types:
+  - Black-box Testing: Test based on I/O; no knowledge of internal code.
+    * Equivalence Partitioning, Boundary Value Analysis.
+  - White-box Testing: Test based on code structure; path coverage.
+    * Statement, Branch, Path, Condition coverage.
+  - Grey-box Testing: Combination.
+
+Performance Testing: Load, Stress, Spike, Endurance testing.
+Security Testing: Penetration testing, vulnerability scanning.
+
+Test Metrics:
+  - Defect Density = Defects / KLOC (1000 lines of code).
+  - Test Coverage = Covered / Total * 100%.
+
+7. SOFTWARE METRICS & PROJECT MANAGEMENT
+
+LOC (Lines of Code): Simple but varies with language.
+Function Point Analysis (FPA): Counts user-visible functions; language-independent.
+COCOMO Model (Constructive Cost Model): Effort = a × (KLOC)^b.
+  Basic: Project only; Intermediate: considers cost drivers; Advanced: phase-level.
+
+Project Management:
+  - Work Breakdown Structure (WBS).
+  - PERT Chart (Program Evaluation & Review Technique): Probabilistic scheduling.
+  - Gantt Chart: Bar chart of schedule; good for milestone tracking.
+  - Critical Path Method (CPM): Identifies longest path (no slack).
+  - Risk Management: Identify, Analyze, Plan, Monitor.
+
+Software Configuration Management (SCM):
+  - Version Control: Git, GitHub, SVN.
+  - Branching strategies: GitFlow, Feature branching.
+
+8. SOFTWARE QUALITY
+- Quality Models: ISO 9001, ISO/IEC 25010 (SQuaRE).
+- Quality Attributes: Reliability, Efficiency, Portability, Maintainability, Testability.
+- Code Review, Walkthroughs, Inspections (Fagan Inspection).
+
+EXAM IMPORTANT TOPICS:
+- Compare SDLC models (table format).
+- Scrum events, roles, artifacts.
+- Draw UML Use Case and Sequence diagrams.
+- Testing types and techniques.
+- COCOMO model calculations.
+- Functional vs Non-Functional requirements.

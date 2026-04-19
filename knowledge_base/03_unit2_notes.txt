@@ -1,0 +1,134 @@
+UNIT 2 NOTES — OPERATING SYSTEMS
+Subject Code: CS3003 | Semester 3 | 3 Credits
+KIIT University — B.Tech CSCE 2023-2027
+============================================================
+
+1. INTRODUCTION TO OPERATING SYSTEMS
+- An OS is system software that manages hardware and software resources.
+- Functions: Process Management, Memory Management, File System Management, I/O Management, Security.
+Types:
+  - Batch OS, Time-Sharing OS, Real-Time OS (RTOS), Distributed OS, Embedded OS.
+- Examples: Windows, Linux (Ubuntu, Fedora), macOS, Android (Linux kernel).
+
+2. PROCESS MANAGEMENT
+- Process: A program in execution. Contains Code, Data, Stack, Heap, PCB (Process Control Block).
+- PCB contains: PID, process state, program counter, CPU registers, memory info, I/O info.
+
+Process States (5-state model):
+  New → Ready → Running → Waiting → Terminated
+
+Context Switching: Saving state of one process and loading state of another.
+
+Process Creation: fork() system call in Linux creates a child process.
+Process Termination: exit() or parent kills child via kill().
+
+Inter-Process Communication (IPC):
+  - Shared Memory: Faster; producer-consumer problem.
+  - Message Passing: send() and receive() primitives.
+  - Pipes: Half-duplex communication between related processes.
+  - Semaphores: Synchronization primitive (wait/signal).
+
+3. THREADS
+- Lightweight process sharing same address space.
+- Types: User-level threads (managed by user library) vs Kernel-level threads (managed by OS).
+- Multithreading Models: Many-to-One, One-to-One, Many-to-Many.
+- Benefits: Responsiveness, resource sharing, economy, scalability.
+
+4. CPU SCHEDULING
+Goal: Maximize CPU utilization, throughput; minimize waiting/turnaround time.
+
+Algorithms:
+a. FCFS (First-Come-First-Served):
+   - Non-preemptive; simple; convoy effect problem.
+b. SJF (Shortest Job First):
+   - Non-preemptive; optimal average waiting time; starvation possible.
+c. SRTF (Shortest Remaining Time First):
+   - Preemptive version of SJF.
+d. Round Robin (RR):
+   - Preemptive; time quantum q; good for time-sharing.
+   - Large q → FCFS; Small q → too many context switches.
+e. Priority Scheduling:
+   - Preemptive or non-preemptive; starvation → solved by aging.
+f. Multilevel Queue Scheduling:
+   - Multiple queues with different algorithms.
+g. Multilevel Feedback Queue:
+   - Processes can move between queues (most flexible).
+
+Metrics:
+  - Arrival Time (AT), Burst Time (BT), Completion Time (CT)
+  - Turnaround Time (TAT) = CT - AT
+  - Waiting Time (WT) = TAT - BT
+  - Response Time = First CPU - AT
+
+5. SYNCHRONIZATION & DEADLOCK
+
+Race Condition: Multiple processes access shared data with at least one write.
+Critical Section Problem: Only one process at a time in critical section.
+
+Solutions:
+  a. Peterson's Algorithm (software, 2 processes)
+  b. Mutex Locks: acquire() and release(); busy waiting (spinlock).
+  c. Semaphores: Binary (0/1) or Counting semaphore; wait(S): S--, signal(S): S++.
+  d. Monitors: High-level synchronization construct; condition variables.
+
+Classic Problems:
+  - Producer-Consumer Problem
+  - Reader-Writer Problem
+  - Dining Philosophers Problem
+
+DEADLOCK:
+Conditions (ALL four must hold):
+  1. Mutual Exclusion
+  2. Hold and Wait
+  3. No Preemption
+  4. Circular Wait
+
+Deadlock Handling:
+  - Prevention: Break one of four conditions.
+  - Avoidance: Banker's Algorithm (safe/unsafe state).
+  - Detection: Resource Allocation Graph (RAG); cycle detection.
+  - Recovery: Process termination or resource preemption.
+
+6. MEMORY MANAGEMENT
+
+Contiguous Memory Allocation:
+  - Fixed Partitioning: Internal fragmentation.
+  - Variable Partitioning: External fragmentation.
+  - Compaction solves external fragmentation.
+
+Paging:
+  - Divide memory into fixed-size frames; process into pages.
+  - Page Table maps logical page → physical frame.
+  - No external fragmentation; internal fragmentation possible.
+  - TLB (Translation Lookaside Buffer): Cache for page table entries.
+
+Segmentation: Divide process into logical segments (code, data, stack).
+
+Virtual Memory:
+  - Allows execution of partially loaded programs.
+  - Demand Paging: Load page only when needed.
+  - Page Fault: Required page not in memory → OS loads from disk.
+  - Page Replacement Algorithms:
+    a. FIFO: First loaded page replaced; Belady's Anomaly possible.
+    b. Optimal (OPT): Replace page used furthest in future; theoretical best.
+    c. LRU (Least Recently Used): Replace least recently used page.
+    d. LFU, MFU variants.
+
+Thrashing: Process spends more time paging than executing; solved with Working Set Model.
+
+7. FILE SYSTEMS
+- File: Named collection of data; has attributes (name, type, size, permissions, timestamps).
+- Directory: Hierarchical structure (tree or DAG); absolute and relative paths.
+- File Allocation Methods:
+  a. Contiguous: Fast access; external fragmentation.
+  b. Linked: No fragmentation; slow random access.
+  c. Indexed: Index block; good random access; inode in Unix.
+- Disk Scheduling:
+  a. FCFS, SSTF (Shortest Seek Time First), SCAN, C-SCAN, LOOK, C-LOOK.
+
+EXAM IMPORTANT TOPICS:
+- CPU scheduling gantt charts and calculations.
+- Banker's Algorithm for deadlock avoidance.
+- Page replacement algorithm examples.
+- Semaphore-based solutions to classical problems.
+- Paging address translation with TLB hit/miss.

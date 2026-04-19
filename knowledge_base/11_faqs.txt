@@ -1,0 +1,110 @@
+FREQUENTLY ASKED QUESTIONS (FAQs)
+Smart Student Assistant — B.Tech CSCE | KIIT University
+2023-2027 Batch Reference Document
+============================================================
+
+SECTION A: ATTENDANCE QUESTIONS
+
+Q1: What is the minimum attendance required to appear in the end semester exam?
+A: The minimum required attendance is 75% in each subject individually. If you fall below 75% in any subject, you will be debarred from the End Semester Exam (ESE) in that specific subject and will receive an automatic 'F' grade.
+
+Q2: Can I get a condonation if my attendance is below 75%?
+A: Yes, but only under certain conditions. If your attendance is between 65% and 75%, you can apply for medical condonation by submitting a valid original medical certificate to the Dean (Academic Affairs) office. The maximum condonation allowed is 10%, bringing the effective minimum to 65%. No condonation is granted below 65% under any circumstances.
+
+Q3: How is attendance calculated? Are all classes counted?
+A: Attendance is calculated separately for each subject including labs. Every scheduled class (lecture or lab) is counted. Proxy attendance is strictly prohibited and treated as academic misconduct.
+
+Q4: What if I miss class due to participating in a university event?
+A: If you participate in an officially approved KIIT event (sports, cultural fest, technical competition), those days may be marked as "Duty Leave" and not counted against your attendance, provided you submit the event participation letter through your faculty advisor within 3 days of returning. This is handled on a case-by-case basis.
+
+SECTION B: EXAM-RELATED QUESTIONS
+
+Q5: What documents do I need for the End Semester Exam?
+A: You must carry two things: (1) your Hall Ticket downloaded from the ERP portal, and (2) your KIIT University ID card. Without the hall ticket, you will not be allowed to enter the exam hall. No exceptions are made.
+
+Q6: When is the hall ticket available?
+A: The hall ticket is typically available on the ERP portal (erp.kiit.ac.in) 5 to 7 days before the examination dates. You will receive an email notification when it is available. Download and check all details carefully.
+
+Q7: What if there is an error on my hall ticket?
+A: Report any error (wrong subject, name discrepancy, etc.) immediately to the Controller of Examinations (CoE) office. Do not wait. Errors must be reported at least 2 days before the first exam to allow for corrections.
+
+Q8: How long is each end semester exam?
+A: Each End Semester Exam is 3 hours (180 minutes) long. The exam is for 60 marks.
+
+Q9: How long is the Mid Semester Exam?
+A: The Mid Semester Exam (MSE) is 1.5 hours (90 minutes) long. It is for 20 marks.
+
+Q10: Can I bring a calculator to the exam?
+A: Only simple, non-programmable calculators are allowed. Programmable calculators, graphing calculators, and phone calculators are strictly prohibited. If any doubt, ask your faculty invigilator before using it.
+
+Q11: What happens if I fail a subject?
+A: If you fail (score below the passing threshold — typically, minimum 40 in ESE and 45 overall), you will be eligible to appear in the Supplementary Examination. The supplementary is held within 4–6 weeks after result declaration. You carry forward your internal marks, and only retake the 60-mark external exam.
+
+Q12: What is the passing criteria for each subject?
+A: You must score at least 40 out of 60 in the End Semester Exam AND at least 45 out of 100 overall (internal + external combined) to pass a subject. Failing either criterion individually results in an 'F' grade.
+
+Q13: What is revaluation/scrutiny?
+A: Within 7 days of result declaration, students can apply for scrutiny (rechecking of totaling) by paying Rs. 500 per subject through the ERP portal. Note: Scrutiny involves recounting marks, not re-evaluating your answers. Answers are not re-read by the examiner.
+
+Q14: What is Belady's Anomaly? (Example of subject-specific FAQ)
+A: Belady's Anomaly is the counterintuitive phenomenon in FIFO page replacement where increasing the number of frames can sometimes lead to MORE page faults, not fewer. It does not occur in optimal or LRU replacement algorithms.
+
+SECTION C: ASSIGNMENT & PROJECT QUESTIONS
+
+Q15: What happens if I submit an assignment late?
+A: Late submission penalties are: 1–2 days late = 20% deduction; 3–5 days late = 50% deduction; more than 5 days late = zero marks (assignment still accepted for records). Exceptions require prior faculty communication and valid proof.
+
+Q16: Can I use ChatGPT or AI tools for assignments?
+A: The policy on AI tool usage varies by faculty and subject. Some faculty permit AI tools if properly disclosed and cited. However, submitting AI-generated content as your own original work without disclosure constitutes plagiarism. Always clarify with your subject faculty before using AI tools.
+
+Q17: What is the plagiarism threshold for written reports?
+A: The acceptable similarity threshold is 25% or below as detected by Turnitin or similar tools. Above 25% triggers investigation. Above 75% similarity or exact copying results in zero marks and a formal warning.
+
+Q18: How many people can be in a group project?
+A: Group projects typically consist of 3 to 4 students. The Major Capstone Project (Semester 7–8) allows groups of 3 to 5 students. Group composition must be declared to faculty by Week 2 of the project announcement.
+
+Q19: Where do I submit assignments online?
+A: Assignments are submitted through the KIIT ERP portal at erp.kiit.ac.in. Navigate to Student Zone → Current Subjects → [Subject Name] → Assignments → Upload.
+
+Q20: Can I change my group after groups are formed?
+A: No, group changes are not permitted without explicit approval from the subject faculty. Approach the faculty with a valid reason at least 2 weeks before the first submission deadline.
+
+SECTION D: GRADING & GPA QUESTIONS
+
+Q21: What is the GPA system at KIIT?
+A: KIIT follows a 10-point GPA scale. Each grade corresponds to a grade point: O=10, E=9, A=8, B=7, C=6, D=5, F=0. See the grading rubric document for full details.
+
+Q22: How is CGPA calculated?
+A: CGPA = Sum of (Credits × Grade Points for each subject) / Total Credits completed. Only passed subjects contribute grade points; failed subjects contribute 0 grade points.
+
+Q23: Is there grade improvement?
+A: Students can appear in exams to improve their grade only if they scored below a C grade (6). Grade improvement is only for the external component; internal marks remain unchanged. Check with the academic office for the current academic year's policy.
+
+Q24: Does attendance affect GPA directly?
+A: Attendance does not directly factor into GPA calculation. However, low attendance can get you debarred from the exam, resulting in an F grade (0 grade point), which heavily impacts CGPA.
+
+SECTION E: GENERAL ACADEMIC QUESTIONS
+
+Q25: What is the ERP portal and what can I do on it?
+A: The ERP portal (erp.kiit.ac.in) is KIIT's central academic management system. You can: view attendance, download hall tickets, check exam schedule, submit assignments, view results, pay fees, check library account, and access course materials.
+
+Q26: How do I access KIIT library databases from home?
+A: KIIT subscribes to IEEE Xplore, Springer, Elsevier (ScienceDirect), ACM Digital Library, and NPTEL. Access is available through the KIIT Library portal using your student credentials. VPN access may be required for off-campus access.
+
+Q27: What is the difference between Semester Back and Year Back?
+A: Semester Back means you failed one or more subjects in a semester and must re-attempt them. Year Back means you have failed enough subjects that you cannot progress to the next academic year and must repeat the year. Specific thresholds are defined in the academic regulations.
+
+Q28: Can I take Online NPTEL courses for credit?
+A: Yes! KIIT has a policy allowing NPTEL/SWAYAM completed courses to be counted toward your Open Elective credits. You must get pre-approval from the HOD, complete the exam, and submit the certificate. A minimum NPTEL score of 60% is required for credit transfer.
+
+Q29: What GPA do I need to be eligible for on-campus placement?
+A: For most companies, you need a minimum CGPA of 6.5 (some require 7.0 or 7.5+). Companies may have their own additional shortlisting criteria. Maintain your CGPA above 7.0 for a good range of opportunities.
+
+Q30: Is there any scholarship based on academic performance?
+A: Yes, KIIT offers merit-based scholarships for students maintaining a CGPA above 8.5. Additionally, students who top the semester (rank 1 in their branch) receive fee waivers in subsequent semesters. Check the Scholarship Portal on the KIIT website for current schemes and deadlines.
+
+Q31: Who do I contact if I have academic grievances?
+A: The order of escalation is: (1) Subject Faculty → (2) Class Coordinator/Mentor → (3) HOD (Head of Department) → (4) Dean (Academic Affairs) → (5) Vice Chancellor's Office. Most issues are resolved at the faculty or HOD level.
+
+Q32: What is the difference between open elective and professional elective?
+A: Open Electives (12 credits) can be chosen from any department across KIIT — even unrelated to computer science. They broaden your knowledge. Professional Electives (12 credits) are specialized advanced subjects within the CSCE domain (e.g., Computer Vision, NLP, Blockchain, Cybersecurity) chosen from a pre-approved list.

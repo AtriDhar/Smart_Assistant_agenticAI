@@ -1,0 +1,130 @@
+REVISION TIPS & STUDY STRATEGIES
+B.Tech CSCE Program | KIIT University
+Compiled for the 2023-2027 Batch
+============================================================
+
+1. GENERAL STUDY PHILOSOPHY
+
+The goal of studying is not to memorize — it is to understand deeply enough
+to apply the knowledge to new problems. Exams in engineering test understanding,
+not rote learning. Use these strategies to study smarter, not harder.
+
+2. THE POMODORO TECHNIQUE (Recommended for all subjects)
+
+Work in focused 25-minute sessions with 5-minute breaks.
+  - Session 1: 25 min study → 5 min break
+  - Session 2: 25 min study → 5 min break
+  - Session 3: 25 min study → 5 min break
+  - Session 4: 25 min study → 20 min long break (Repeat cycle)
+
+Best for: Coding practice, problem-solving, reading lecture notes.
+Tool: Forest App, Tomato Timer, or a simple phone timer.
+
+3. ACTIVE RECALL (Most powerful study technique)
+
+Instead of re-reading notes, test yourself:
+  - After reading a chapter, close the book and write everything you remember.
+  - Use flashcards (digital: Anki app) for definitions, algorithms, theorems.
+  - Solve previous year question papers WITHOUT looking at solutions first.
+  - Explain concepts aloud to yourself (Feynman Technique).
+  - Teach the concept to a friend — if you can teach it, you know it.
+
+4. SPACED REPETITION
+
+Review material at increasing intervals to commit it to long-term memory.
+Schedule:
+  Day 1: Learn new material.
+  Day 2: Quick 15-min review.
+  Day 5: Another 10-min review.
+  Day 14: Quick review.
+  Day 30: Final revision before exam.
+
+Use the Anki app (free) which automates spaced repetition for flashcards.
+
+5. SUBJECT-SPECIFIC REVISION TIPS
+
+DATA STRUCTURES & ALGORITHMS:
+  - Practice writing code by hand (for viva and exams).
+  - Solve at least 5 problems per data structure on LeetCode or HackerRank.
+  - Draw diagrams for tree rotations (AVL, B-Tree), graph traversals.
+  - Memorize time and space complexities of all algorithms as a table.
+  - Important: Trace through Dijkstra's, BFS, DFS step-by-step with examples.
+  - For sorting: Know which algorithms are stable and which are in-place.
+  - Recommended PYQs: Focus on recurrence relations and algorithm design.
+
+OPERATING SYSTEMS:
+  - Draw and memorize the 5-state process model diagram.
+  - Practice CPU scheduling Gantt charts (FCFS, SJF, RR with given data).
+  - Memorize all 4 Coffman conditions for deadlock; practice Banker's Algorithm.
+  - For memory management: work through paging address translation numericals.
+  - Know LRU, FIFO, Optimal page replacement algorithms with frame examples.
+  - Practice: Given a reference string, compute page faults with 3 frames.
+
+DATABASE MANAGEMENT SYSTEMS:
+  - Write SQL queries every day — use SQLZoo.net or W3Schools SQL practice.
+  - Draw ER diagrams from scratch for common scenarios (Library, Hospital, Bank).
+  - Normalize a given relation to BCNF step-by-step for exam practice.
+  - Memorize all relational algebra operators with syntax and examples.
+  - Understand 2PL with lock compatibility matrix; practice serializability.
+
+COMPUTER NETWORKS:
+  - Draw the OSI model from memory; map every protocol to its layer.
+  - Practice subnetting: given IP/prefix, find network address, broadcast, host range.
+  - Trace a packet from source to destination through all layers.
+  - Know port numbers for major protocols; they appear in MCQs.
+  - For routing: trace Dijkstra's algorithm on a small network graph.
+  - CRC calculation: practice polynomial division problems.
+
+SOFTWARE ENGINEERING:
+  - Draw SDLC model diagrams (Waterfall V-shape, Spiral quadrants).
+  - Know Agile vs Waterfall pros and cons for comparison questions.
+  - Draw UML class and sequence diagrams for given scenarios.
+  - Practice: Write a mini SRS for a simple system (Library management, ATM).
+  - COCOMO: Memorize basic formula and modes.
+
+6. EXAM PREPARATION STRATEGY
+
+4 WEEKS BEFORE EXAM:
+  - Cover all 5 modules at least once.
+  - Complete all assignments and lab exercises.
+  - Make short notes (1 page per module with key points).
+
+2 WEEKS BEFORE EXAM:
+  - Solve last 3–5 years of previous year questions (PYQs).
+  - Identify repeated themes and high-weightage topics.
+  - Do 2–3 mock tests under exam conditions (3 hours, no distractions).
+
+1 WEEK BEFORE EXAM:
+  - Only review one-page notes and flashcards.
+  - Do NOT start new topics. Revise what you know.
+  - Focus on algorithm problems and numerical problems (guaranteed marks).
+  - Get 8 hours of sleep every night.
+
+DAY BEFORE EXAM:
+  - Light revision only (1–2 hours).
+  - Read through one-page formula/concept sheets.
+  - Lay out your exam kit the night before.
+  - Sleep by 10:30 PM.
+
+EXAM DAY:
+  - Wake up 2 hours before reporting time; eat a light breakfast.
+  - Carry: Hall ticket + KIIT ID card + pens (3 minimum) + non-programmable calculator.
+  - Read all questions before starting; attempt high-confidence questions first.
+  - For 10-mark questions: write headings, points, diagrams — examiner rewards structure.
+  - Budget time: 3-hour exam → 3 minutes per mark.
+
+7. MENTAL HEALTH & WELLBEING
+
+- Take care of sleep: 7–8 hours per night is non-negotiable.
+- During stress periods: 20-min walks, deep breathing, talking to friends.
+- KIIT has a Student Wellness Centre with counsellors (free of charge).
+- Study in groups for difficult topics; isolation makes hard topics harder.
+- Avoid back-to-back all-nighters; they reduce retention significantly.
+- Use university library (open until 10 PM on weekdays).
+
+8. RECOMMENDED RESOURCES
+
+Online Platforms: LeetCode, GeeksForGeeks, W3Schools, Coursera, NPTEL.
+YouTube: Abdul Bari (DSA/Algorithms), Neso Academy (Networks, OS, DBMS), Gate Smashers (DBMS, OS).
+Books: CLRS (Algorithms), Silberschatz (OS), Ramakrishnan (DBMS), Tanenbaum (Networks), Sommerville (SE).
+Practice Tools: Anki (spaced repetition), Notion (notes), GitHub (code projects).

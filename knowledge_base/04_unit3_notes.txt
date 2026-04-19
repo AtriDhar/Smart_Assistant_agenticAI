@@ -1,0 +1,122 @@
+UNIT 3 NOTES — DATABASE MANAGEMENT SYSTEMS (DBMS)
+Subject Code: CS3005 | Semester 3 | 3 Credits
+KIIT University — B.Tech CSCE 2023-2027
+============================================================
+
+1. INTRODUCTION TO DBMS
+- DBMS: Software for creating, managing, and querying databases.
+- Advantages over flat files: Data independence, reduced redundancy, integrity, security, concurrent access.
+- Database Types: Relational, NoSQL (Document, Key-Value, Graph, Column), NewSQL.
+- Examples: MySQL, PostgreSQL, Oracle (Relational); MongoDB (Document); Redis (Key-Value).
+
+2. ER MODEL (Entity-Relationship)
+- Entity: Real-world object with attributes. Strong vs Weak Entity.
+- Attribute types: Simple, Composite, Multi-valued, Derived, Key.
+- Relationship: Association between entities; cardinality (1:1, 1:N, M:N); participation (total/partial).
+- ER Diagram → Converted to Relational Schema.
+  - M:N relationship → Separate relation table.
+  - Weak entity → Primary key = partial key + owner PK.
+
+3. RELATIONAL MODEL
+- Data organized as tables (relations) with rows (tuples) and columns (attributes).
+- Keys:
+  - Super Key: Set of attributes identifying a tuple.
+  - Candidate Key: Minimal super key.
+  - Primary Key: Chosen candidate key; NOT NULL, UNIQUE.
+  - Foreign Key: References primary key in another relation.
+  - Alternate Key, Composite Key.
+
+4. RELATIONAL ALGEBRA
+- Procedural query language; basis for SQL.
+Operations:
+  a. Selection (σ): Filters rows — σ_condition(R)
+  b. Projection (π): Selects columns — π_attrs(R)
+  c. Union (∪): Combines tuples from two compatible relations.
+  d. Intersection (∩): Common tuples in two relations.
+  e. Difference (−): Tuples in R but not in S.
+  f. Cartesian Product (×): All pairs of tuples.
+  g. Join (⋈):
+     - Natural Join: Join on common attributes.
+     - Theta Join: Join with arbitrary condition.
+     - Equi Join: Theta join with equality.
+     - Left/Right/Full Outer Join: Preserves unmatched tuples.
+  h. Division (÷): Finds tuples related to ALL tuples in another relation.
+
+5. SQL (Structured Query Language)
+DDL (Data Definition Language):
+  CREATE TABLE, ALTER TABLE, DROP TABLE, TRUNCATE
+
+DML (Data Manipulation Language):
+  INSERT, UPDATE, DELETE, SELECT
+
+DCL: GRANT, REVOKE
+TCL: COMMIT, ROLLBACK, SAVEPOINT
+
+Important SQL Constructs:
+  - SELECT...FROM...WHERE...GROUP BY...HAVING...ORDER BY
+  - JOINS: INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER, CROSS, SELF
+  - Subqueries: Correlated and non-correlated.
+  - Aggregate Functions: COUNT(), SUM(), AVG(), MIN(), MAX()
+  - Window Functions: RANK(), ROW_NUMBER(), DENSE_RANK(), LAG(), LEAD()
+  - Views: Virtual tables; CREATE VIEW; updatable views.
+  - Indexes: B-Tree index (default), Hash index; speeds up retrieval.
+  - Triggers: Automatic actions on INSERT/UPDATE/DELETE.
+  - Stored Procedures: Pre-compiled SQL blocks.
+
+6. NORMALIZATION
+Goal: Eliminate data redundancy and update anomalies.
+
+Normal Forms:
+1NF: No multivalued attributes; atomic values; primary key defined.
+2NF: In 1NF; no partial dependency (non-key attribute dependent on part of composite PK).
+3NF: In 2NF; no transitive dependency (non-key → non-key → primary).
+BCNF: In 3NF; for every FD X→Y, X must be a super key.
+4NF: No multi-valued dependencies.
+5NF: No join dependency.
+
+Functional Dependency (FD): X→Y means X determines Y.
+Closure of a set of FDs: F+ = all FDs derivable from F.
+Minimal Cover: Minimum set of FDs equivalent to F.
+Armstrong's Axioms: Reflexivity, Augmentation, Transitivity.
+Lossless Decomposition: Natural join of decomposed relations = original relation.
+
+7. TRANSACTIONS & CONCURRENCY
+
+Transaction: A unit of work that is ACID compliant.
+ACID Properties:
+  - Atomicity: All or nothing; COMMIT or ROLLBACK.
+  - Consistency: Database moves from one valid state to another.
+  - Isolation: Concurrent transactions do not interfere.
+  - Durability: Committed changes persist even after failure.
+
+Concurrency Problems:
+  - Dirty Read: Reading uncommitted data.
+  - Non-Repeatable Read: Same query returns different data within transaction.
+  - Phantom Read: New rows appear in repeated reads.
+  - Lost Update: Two transactions overwrite each other.
+
+Isolation Levels (weakest to strongest):
+  Read Uncommitted → Read Committed → Repeatable Read → Serializable
+
+Locking:
+  - Shared Lock (S): For reads; compatible with other S-locks.
+  - Exclusive Lock (X): For writes; not compatible with any lock.
+  - Two-Phase Locking (2PL): Growing phase (acquire) + Shrinking phase (release) → ensures serializability.
+
+Deadlock in Transactions: Waits-for graph; cycle detection.
+
+8. NoSQL DATABASES
+- Not Only SQL; schema-less; horizontal scaling.
+Types:
+  - Document: MongoDB (JSON/BSON); flexible schema.
+  - Key-Value: Redis; fastest; used for caching.
+  - Column-Family: Cassandra; time-series data.
+  - Graph: Neo4j; relationship-heavy data.
+CAP Theorem: Can only guarantee 2 of: Consistency, Availability, Partition Tolerance.
+
+EXAM IMPORTANT TOPICS:
+- Convert ER diagram to relational schema.
+- Write SQL queries with joins, subqueries, GROUP BY, HAVING.
+- Normalization: identify FDs, decompose to BCNF.
+- ACID properties with examples.
+- 2PL protocol and serializability.

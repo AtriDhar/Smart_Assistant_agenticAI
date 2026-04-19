@@ -1,0 +1,135 @@
+EXAMINATION RULES & REGULATIONS
+B.Tech CSCE Program | KIIT University | 2023-2027 Batch
+Controller of Examinations — Academic Regulations
+============================================================
+
+1. EXAMINATION STRUCTURE
+
+For each theory subject (per semester):
+  ┌─────────────────────────────────────────┐
+  │  Component            │ Maximum Marks   │
+  ├───────────────────────┼─────────────────┤
+  │  Mid Semester Exam    │     20 Marks    │
+  │  Class Test / Quiz    │     10 Marks    │
+  │  Assignment / Viva    │     10 Marks    │
+  │  End Semester Exam    │     60 Marks    │
+  │  TOTAL                │    100 Marks    │
+  └─────────────────────────────────────────┘
+
+For each lab/practical subject:
+  ┌─────────────────────────────────────────┐
+  │  Component            │ Maximum Marks   │
+  ├───────────────────────┼─────────────────┤
+  │  Continuous Eval.     │     30 Marks    │
+  │  Practical End Exam   │     20 Marks    │
+  │  TOTAL                │     50 Marks    │
+  └─────────────────────────────────────────┘
+
+2. MID SEMESTER EXAMINATION (MSE)
+
+- Commonly called Mid Sem or Mid Term Exam.
+- Conducted around Week 7–8 of each semester.
+- Duration: 1.5 hours (90 minutes).
+- Syllabus: Modules 1 and 2 of each subject (approximately 40% of full syllabus).
+- Maximum Marks: 20 per subject.
+- Question Pattern:
+  * Short-answer questions (2 marks × 5 = 10 marks)
+  * Long-answer questions (5 marks × 2 = 10 marks)
+- No hall ticket required for Mid Sem; regular student ID card is sufficient.
+- Venue: Declared on the university ERP portal 3 days prior.
+
+3. END SEMESTER EXAMINATION (ESE)
+
+- Conducted after Week 15–16 (at the end of semester).
+- Practical exams: Last two weeks of the semester.
+- Duration: 3 hours (180 minutes).
+- Syllabus: Entire semester syllabus (all 5 modules).
+- Maximum Marks: 60 per subject.
+- Question Pattern (standard format):
+  * Section A: 2 marks × 10 = 20 marks (short answers, compulsory)
+  * Section B: 5 marks × 4 = 20 marks (choose 4 from 6)
+  * Section C: 10 marks × 2 = 20 marks (choose 2 from 4; long answers)
+- HALL TICKET: Mandatory for End Semester Exam.
+  - Hall ticket issued via university ERP portal (erp.kiit.ac.in).
+  - Available 5–7 days before exam.
+  - Students must verify their details; errors must be reported to CoE office immediately.
+  - Hall ticket must be presented along with KIIT ID card before entering exam hall.
+  - No hall ticket = Not allowed to appear in exam. No exceptions.
+
+4. ELIGIBILITY CRITERIA FOR END SEMESTER EXAM
+
+ATTENDANCE REQUIREMENT:
+- Minimum 75% attendance in each subject is compulsory.
+- Students with attendance below 75% are debarred from ESE in that subject.
+- Debarred students automatically get 'F' grade and must repeat the subject.
+
+MEDICAL CONDONATION:
+  - Students between 65%–75% with valid medical proof may apply for condonation.
+  - Application to Dean (Academic Affairs) with original medical certificate.
+  - Maximum condonation: 10% can be condoned (so effective minimum = 65%).
+  - Condonation NOT applicable if attendance is below 65%.
+
+DUES/LIBRARY CLEARANCE:
+  - All library dues, hostel dues, and fee arrears must be cleared.
+  - Students with pending dues may not receive hall ticket.
+
+BACK PAPER (SUPPLEMENTARY):
+  - Students who fail (< 40 in ESE or < 45 overall) can appear in supplementary.
+  - Supplementary Exam: Held within 4–6 weeks of result declaration.
+  - Maximum marks in supplementary ESE = 60 (no override of internal marks).
+
+5. EXAMINATION CONDUCT RULES
+
+During Examination:
+  - Students must arrive at exam hall at least 15 minutes before start time.
+  - Late entry: Allowed up to 30 minutes; no extra time given.
+  - Entry NOT allowed after 30 minutes from start.
+  - Students may leave only after 1 hour from exam start.
+
+Prohibited Items:
+  - Mobile phones, smartwatches, Bluetooth devices — STRICTLY PROHIBITED.
+  - Programmable calculators not allowed (simple non-programmable only).
+  - Chits, handwritten notes of any kind.
+  - Electronic devices including earphones, tablets.
+  - Bags must be kept outside; only essential stationery allowed inside.
+
+Seating:
+  - Assigned seats as per hall ticket; changing seats is not permitted.
+  - Students must sit as per room allotment on hall ticket.
+
+Answer Sheet:
+  - Write Roll Number, Subject Code, Date on every answer sheet.
+  - Additional sheets must be tagged with proper serial numbers.
+  - Choose questions carefully; questions once attempted will be evaluated.
+
+Unfair Means (UFM):
+  - Possession of unauthorized material = UFM case; subject fails.
+  - Copying or helping to copy = both students penalized.
+  - UFM cases go to the Examination Disciplinary Committee.
+  - Penalty: F grade in the subject + possible suspension (repeat offenses).
+
+6. RESULT DECLARATION
+
+- Results declared within 30–45 days of ESE completion.
+- Available on ERP portal and KIIT official website.
+- Grade card issued after result.
+- Revaluation (Scrutiny):
+  - Students can apply for scrutiny within 7 days of result declaration.
+  - Fee: Rs. 500 per subject.
+  - Rechecking involves totaling marks; not a re-evaluation of answers.
+
+7. GRADING SYSTEM
+See separate document: 12_grading_rubric.txt for detailed grade criteria.
+
+8. SPECIAL PROVISIONS
+
+Medical Emergency During Exam:
+  - If a student falls ill during exam, invigilator must be informed.
+  - Partial exam with valid medical reason → Medical Exam (ME) consideration.
+
+COVID/Force Majeure:
+  - University follows government guidelines; makeup exams as per UGC norms.
+
+Students with Disabilities:
+  - Eligible for extra time (up to 1 hour) and scribe assistance.
+  - Apply to Dean's office at semester start with disability certificate.
