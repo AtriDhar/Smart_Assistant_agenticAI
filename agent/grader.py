@@ -7,8 +7,7 @@ from __future__ import annotations
 
 import os
 
-from langchain_google_genai import ChatGoogleGenerativeAI
-
+from agent.llm_config import get_chat_llm
 from agent.state import AgentState
 
 _GRADE_PROMPT = """You are a relevance grader for an academic question-answering system.
@@ -26,11 +25,7 @@ Respond with ONLY "YES" or "NO" — no explanation.
 
 
 def _get_llm():
-    return ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
-        temperature=0,
-        google_api_key=os.getenv("GOOGLE_API_KEY"),
-    )
+    return get_chat_llm(temperature=0)
 
 
 def grader_node(state: AgentState) -> dict:

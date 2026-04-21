@@ -7,8 +7,8 @@ from __future__ import annotations
 import os
 
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_google_genai import ChatGoogleGenerativeAI
 
+from agent.llm_config import get_chat_llm
 from agent.state import AgentState
 
 _SYSTEM_PROMPT = """You are a smart router for an academic student assistant at KIIT University.
@@ -41,11 +41,7 @@ Examples:
 
 def router_node(state: AgentState) -> dict:
     """Determine the route for the current question."""
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
-        temperature=0,
-        google_api_key=os.getenv("GOOGLE_API_KEY"),
-    )
+    llm = get_chat_llm(temperature=0)
 
     response = llm.invoke(
         [

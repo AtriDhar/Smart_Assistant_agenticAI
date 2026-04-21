@@ -65,10 +65,10 @@ def _embed_batch_with_retry(vectorstore, batch, embeddings, max_retries: int = 6
 
 
 def build_index() -> None:
-    api_key = os.getenv("GOOGLE_API_KEY")
+    api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
     if not api_key:
         raise EnvironmentError(
-            "GOOGLE_API_KEY is not set. Create a .env file with GOOGLE_API_KEY=<your-key>."
+            "API key missing. Create a .env file with GOOGLE_API_KEY=<your-key> or GEMINI_API_KEY=<your-key>."
         )
 
     # ── 1. Load all .txt documents ────────────────────────────────────────────

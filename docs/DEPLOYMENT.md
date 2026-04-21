@@ -4,11 +4,12 @@ This guide gives you a reliable path to deploy the app from this repository.
 
 ## 1) Pre-deploy checklist
 
-- Google Gemini API key is available.
+- Obtain a Google API key from Google AI Studio.
 - `.env` exists locally with:
 
 ```env
-GOOGLE_API_KEY=your_actual_api_key
+GOOGLE_API_KEY=your_actual_google_key
+GEMINI_CHAT_MODEL=gemini-2.5-flash
 ```
 
 - Dependencies installed:
@@ -17,16 +18,10 @@ GOOGLE_API_KEY=your_actual_api_key
 pip install -r requirements.txt
 ```
 
-- FAISS index can be generated:
-
-```bash
-python scripts/build_index.py
-```
-
 - Retrieval tests pass:
 
 ```bash
-pytest scripts/test_retrieval.py -v
+python -m pytest scripts/test_retrieval.py -v
 ```
 
 ## 2) Local deployment (recommended first)
@@ -39,6 +34,14 @@ streamlit run app.py
 
 Open the URL shown in terminal (usually `http://localhost:8501`).
 
+### Local deployment with Docker
+
+You can also run the app using Docker Compose:
+
+```bash
+docker compose up --build
+```
+
 ## 3) Deploy on Streamlit Community Cloud
 
 1. Push this project to GitHub.
@@ -47,37 +50,43 @@ Open the URL shown in terminal (usually `http://localhost:8501`).
    - Repository: your GitHub repo
    - Branch: `main` (or your deployment branch)
    - Main file path: `app.py`
-4. In app settings, add secret:
+4. In app settings, add secrets:
 
 ```toml
-GOOGLE_API_KEY="your_actual_api_key"
+GOOGLE_API_KEY="your_actual_google_key"
+GEMINI_CHAT_MODEL="gemini-2.5-flash"
 ```
 
 5. Deploy.
 
 ### Notes
 
-- Keep `vector_store/` in the repo if you want faster cold start.
-- If `vector_store/` is not committed, first launch may take longer because the app will build index automatically.
-- `runtime.txt` pins Python for better compatibility.
+- Keep `vector_store/` in the repo to avoid rebuilding the index.
+- If `vector_store/` is not committed, the first launch may take longer because the app will build index automatically.
+- The sidebar allows users to enter their Google API key if environment variables are not set.
 
-## 4) Deploy on Render (Procfile-based)
+## 4) Deploy on Render / Railway (Docker / Procfile)
 
-This repo includes a `Procfile`:
+This repo includes both a `Dockerfile` and a `Procfile`.
 
-```text
-web: streamlit run app.py --server.address 0.0.0.0 --server.port $PORT
-```
+### Option A: Docker (Recommended for Railway/Fly.io)
+Platforms like Railway or Fly.io can directly build from the provided Dockerfile.
+1. Create a new service from your GitHub repo.
+2. The platform will automatically detect the `Dockerfile`.
+3. Set environment variables (`GOOGLE_API_KEY`, `GEMINI_CHAT_MODEL`).
+4. Expose port `8501`.
+5. Deploy.
 
-Render setup:
-
+### Option B: Procfile (Recommended for Render)
+Render setup via Native Environment:
 1. Create a new Web Service from your GitHub repo.
 2. Environment:
    - Runtime: Python
    - Build Command: `pip install -r requirements.txt`
-   - Start Command: auto-detected from `Procfile` or set same command manually
-3. Add environment variable:
-   - `GOOGLE_API_KEY=your_actual_api_key`
+   - Start Command: auto-detected from `Procfile`
+3. Add environment variables:
+   - `GOOGLE_API_KEY=your_actual_key`
+   - `GEMINI_CHAT_MODEL=gemini-2.5-flash`
 4. Deploy.
 
 ## 5) Post-deploy verification
@@ -100,27 +109,19 @@ Suggested smoke tests:
 
 ## 6) Common deployment issues
 
-### Error: `GOOGLE_API_KEY` not set
-
-Set it in platform secrets/environment settings and redeploy.
+### Error: API key required
+Users can either set `GOOGLE_API_KEY` globally in platform secrets or enter it via the sidebar.
 
 ### Error: FAISS index missing
-
 Either:
 - commit `vector_store/index.faiss` and `vector_store/index.pkl`, or
-- allow first-run auto-build (requires valid API key + enough quota).
-
-### Error: embedding API quota exceeded (429)
-
-The index builder already includes retry logic. If quota remains exhausted, wait and retry.
+- allow first-run auto-build (requires valid Google API key + enough quota).
 
 ### Error: model not found
-
-Current code uses `gemini-embedding-001`, which is compatible with the installed SDK setup.
+Ensure the configured chat model is available to your API key. By default, the app uses `gemini-2.5-flash`.
 
 ## 7) Production hardening recommendations
 
-- Add request logging and observability (LangSmith or app logs).
+- Use the provided `healthcheck.py` to monitor service uptime.
 - Add rate limiting for public deployments.
-- Add optional auth if exposing externally.
-- Add health check endpoint or startup check script.
+- Add optional auth if exposing externally (e.g., Streamlit auth).

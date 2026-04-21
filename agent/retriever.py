@@ -10,6 +10,7 @@ from pathlib import Path
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
+from agent.llm_config import _get_google_key
 from agent.state import AgentState
 
 _BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,9 +23,15 @@ def _get_vectorstore() -> FAISS:
     """Lazy-load and cache the FAISS vectorstore."""
     global _vectorstore
     if _vectorstore is None:
+        api_key = _get_google_key()
+        if not api_key:
+            raise EnvironmentError(
+                "Google API key is required for embeddings/retrieval. "
+                "Set GOOGLE_API_KEY in .env or the sidebar."
+            )
         embeddings = GoogleGenerativeAIEmbeddings(
             model="gemini-embedding-001",
-            google_api_key=os.getenv("GOOGLE_API_KEY"),
+            google_api_key=api_key,
         )
         _vectorstore = FAISS.load_local(
             _VS_PATH,

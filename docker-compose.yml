@@ -1,0 +1,18 @@
+###############################################################################
+# Docker Compose — Smart Student Assistant
+# Usage:
+#   1. Copy .env.example to .env and fill in your API keys
+#   2. docker compose up --build
+#   3. Open http://localhost:8501
+###############################################################################
+services:
+  app:
+    build: .
+    container_name: smart-student-assistant
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./vector_store:/app/vector_store

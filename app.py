@@ -2,6 +2,7 @@
 Smart Student Assistant — Streamlit UI
 B.Tech CSCE | KIIT University | 2023-2027 Batch
 
+Powered strictly by Google Gemini.
 Run: streamlit run app.py
 """
 from __future__ import annotations
@@ -50,7 +51,18 @@ html, body, [class*="css"] {
     padding: 1rem 1.5rem;
     margin-bottom: 1.25rem;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
 }
+.header-band::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 200%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(129,140,248,0.06), transparent);
+    animation: shimmer 4s infinite;
+}
+@keyframes shimmer { 100% { transform: translateX(50%); } }
 .header-band h1 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -143,11 +155,47 @@ html, body, [class*="css"] {
     padding: 1.5rem;
     text-align: center;
     margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
 }
-.welcome-card h3 { color: #A78BFA; font-size: 1.1rem; margin-bottom: 0.5rem; }
-.welcome-card p  { color: #8B949E; font-size: 0.83rem; }
+.welcome-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(99,102,241,0.04) 0%, transparent 70%);
+    animation: pulse-bg 5s ease-in-out infinite;
+}
+@keyframes pulse-bg {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+.welcome-card h3 { color: #A78BFA; font-size: 1.1rem; margin-bottom: 0.5rem; position: relative; }
+.welcome-card p  { color: #8B949E; font-size: 0.83rem; position: relative; }
 .suggestion-btn { color: #818CF8; background: #1d2d50; border: 1px solid #6366F133;
-    border-radius: 8px; padding: 5px 12px; font-size: 0.78rem; margin: 3px; display:inline-block; }
+    border-radius: 8px; padding: 5px 12px; font-size: 0.78rem; margin: 3px; display:inline-block;
+    transition: all 0.2s ease; cursor: default; }
+.suggestion-btn:hover {
+    background: #263a5e; border-color: #6366F166;
+    transform: translateY(-1px); box-shadow: 0 2px 8px rgba(99,102,241,0.2);
+}
+
+/* ── Provider status ── */
+.provider-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 600;
+}
+.provider-gemini { background: #2d1a3a; color: #c084fc; border: 1px solid #c084fc44; }
+.provider-none   { background: #3a1a1a; color: #f87171; border: 1px solid #f8717144; }
+
+/* ── Footer ── */
+.app-footer {
+    text-align: center; padding: 1rem 0 0.5rem;
+    font-size: 0.7rem; color: #484f58;
+    border-top: 1px solid #21262d;
+    margin-top: 2rem;
+}
+.app-footer a { color: #6366F1; text-decoration: none; }
 </style>
 """,
     unsafe_allow_html=True,
@@ -155,6 +203,15 @@ html, body, [class*="css"] {
 
 # ── Helper: ensure vector store exists ───────────────────────────────────────
 VS_PATH = Path(__file__).resolve().parent / "vector_store"
+
+
+def _effective_google_key() -> str:
+    """Return an API key without exposing secret values in visible inputs."""
+    return (
+        st.session_state.get("google_api_key", "")
+        or st.session_state.get("runtime_google_api_key", "")
+        or ""
+    )
 
 def _ensure_index():
     if not VS_PATH.exists() or not any(VS_PATH.iterdir()):
@@ -166,10 +223,24 @@ def _ensure_index():
 
 # ── Session state init ────────────────────────────────────────────────────────
 def _init_session():
+    # Keep env-provided key internal so it is never shown in UI inputs.
+    if "runtime_google_api_key" not in st.session_state:
+        st.session_state.runtime_google_api_key = (
+            os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY") or ""
+        )
+
+    # Session-entered key (intentionally starts blank in the UI).
+    if "google_api_key" not in st.session_state:
+        st.session_state.google_api_key = ""
+
     if "graph" not in st.session_state:
-        _ensure_index()
-        from agent.graph import get_graph
-        st.session_state.graph = get_graph()
+        # Avoid building graph if no key exists, as it fails embeddings
+        if _effective_google_key():
+            _ensure_index()
+            from agent.graph import get_graph
+            st.session_state.graph = get_graph()
+        else:
+            st.session_state.graph = None
 
     if "messages" not in st.session_state:
         st.session_state.messages = []          # conversation history (BaseMessage list)
@@ -198,6 +269,17 @@ def _route_badge(route: str) -> str:
 # ── Process a user question ───────────────────────────────────────────────────
 def _process(question: str):
     graph = st.session_state.graph
+    
+    if not graph:
+        # Re-attempt building graph if key was just added
+        if _effective_google_key():
+            _ensure_index()
+            from agent.graph import get_graph
+            st.session_state.graph = get_graph()
+            graph = st.session_state.graph
+        else:
+            st.error("Google API Key missing. Set it in Streamlit Secrets or provide it in the sidebar.")
+            return
 
     # Build the state for this turn (carry forward message history)
     state = {
@@ -213,7 +295,36 @@ def _process(question: str):
         "source_docs": [],
     }
 
-    result = graph.invoke(state)
+    try:
+        result = graph.invoke(state)
+    except Exception as exc:
+        err = str(exc)
+        if "NOT_FOUND" in err and "model" in err.lower():
+            fallback = (
+                "⚠️ The configured Gemini chat model is not available for this API endpoint.\n\n"
+                "Check your model setting in the environment and restart."
+            )
+        elif "RESOURCE_EXHAUSTED" in err or "429" in err:
+            fallback = (
+                "⚠️ API quota is temporarily exhausted.\n\n"
+                "Please wait for quota reset, then retry."
+            )
+        elif "API_KEY_INVALID" in err or "API key not valid" in err or "authentication" in err.lower():
+            fallback = (
+                "⚠️ API key error. Please verify Streamlit Secrets (or sidebar key if entered)."
+            )
+        else:
+            fallback = (
+                "⚠️ The assistant encountered an error while processing your question.\n\n"
+                "Please retry."
+            )
+
+        result = {
+            "messages": st.session_state.messages,
+            "answer": fallback,
+            "route": "out_of_scope",
+            "source_docs": [],
+        }
 
     # Update persistent message history
     st.session_state.messages = result["messages"]
@@ -255,6 +366,48 @@ def _render_sidebar():
 
         st.divider()
 
+        # ── API Key Inputs ───────────────────────────────────────────────────
+        st.markdown("**🔑 API Key Configuration**")
+
+        google_key = st.text_input(
+            "Google Gemini API Key",
+            type="password",
+            placeholder="AIza...",
+            key="google_key_input",
+            help="Optional: this is stored only in current session. For deployment, set Streamlit Secrets instead.",
+        )
+        if google_key != st.session_state.get("google_api_key", ""):
+            st.session_state.google_api_key = google_key
+            os.environ["GOOGLE_API_KEY"] = google_key
+            
+            # Immediately try to reconstruct graph with new key
+            _ensure_index()
+            from agent.graph import build_graph
+            st.session_state.graph = build_graph()
+            st.rerun()
+
+        # ── Connection Status ────────────────────────────────────────────────
+        if _effective_google_key():
+            model_name = os.getenv("GEMINI_CHAT_MODEL", "gemini-2.5-flash")
+            st.markdown(
+                f'<div style="margin-top:4px;">'
+                f'<span class="provider-badge provider-gemini">⚡ Gemini ({model_name})</span>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+            if st.session_state.get("runtime_google_api_key") and not st.session_state.get("google_api_key"):
+                st.caption("Using secure environment/Secrets configuration. API key is hidden.")
+        else:
+            st.markdown(
+                f'<div style="margin-top:4px;">'
+                f'<span class="provider-badge provider-none">❌ Not configured</span>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+        st.divider()
+
+        # ── Knowledge Base Topics ────────────────────────────────────────────
         st.markdown("**📚 Knowledge Base Topics**")
         topics = [
             ("01", "Course Overview & Program Structure"),
@@ -313,7 +466,7 @@ def _render_sidebar():
 <b style="color:#A78BFA">5. Evaluator</b> — checks answer faithfulness<br>
 <b style="color:#A78BFA">6. Memory</b> — saves the exchange for follow-ups<br>
 <br>
-Built with <b>LangGraph</b>, <b>FAISS</b>, <b>Gemini 1.5 Flash</b>, <b>Streamlit</b>
+Built with <b>LangGraph</b>, <b>FAISS</b>, <b>Google Gemini</b>, <b>Streamlit</b>
 </div>
 """,
                 unsafe_allow_html=True,
@@ -338,11 +491,15 @@ def _render_main():
         """
 <div class="header-band">
   <h1>🎓 Smart Student Assistant</h1>
-  <p>B.Tech CSCE · KIIT University · Powered by RAG + LangGraph + Gemini 1.5 Flash</p>
+    <p>B.Tech CSCE · KIIT University · Powered by RAG + LangGraph + Google Gemini</p>
 </div>
 """,
         unsafe_allow_html=True,
     )
+
+    # ── API key warning ───────────────────────────────────────────────────────
+    if not _effective_google_key():
+        st.warning("⚠️ Google API Key required! Set Streamlit Secrets (or enter one in the sidebar) to start.", icon="🔑")
 
     # ── Chat display ──────────────────────────────────────────────────────────
     chat = st.session_state.chat_display
@@ -396,9 +553,23 @@ def _render_main():
     )
 
     if question:
-        with st.spinner("🤔 Thinking…"):
-            _process(question)
-        st.rerun()
+        if not _effective_google_key():
+            st.error("Google API Key missing. Set Streamlit Secrets (or provide it in the sidebar).", icon="🔑")
+        else:
+            with st.spinner("🤔 Thinking…"):
+                _process(question)
+            st.rerun()
+
+    # ── Footer ────────────────────────────────────────────────────────────────
+    st.markdown(
+        """
+<div class="app-footer">
+  Smart Student Assistant v2.0 · Built with ❤️ at KIIT University · 
+  <a href="https://github.com">Source</a>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

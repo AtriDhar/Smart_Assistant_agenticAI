@@ -122,7 +122,7 @@ capstone/
 | Layer | Technology |
 |---|---|
 | Agent Framework | LangGraph (StateGraph) |
-| LLM | Google Gemini 1.5 Flash |
+| LLM | Google Gemini (default: gemini-2.5-flash, configurable via `GEMINI_CHAT_MODEL`) |
 | Embeddings | Google gemini-embedding-001 |
 | Vector Store | FAISS (CPU, local) |
 | Memory | LangGraph AgentState (`operator.add`) |
