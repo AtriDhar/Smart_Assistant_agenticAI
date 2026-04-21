@@ -104,10 +104,6 @@ capstone/
 |-- scripts/
 |   |-- build_index.py       # FAISS index builder
 |   `-- test_retrieval.py    # pytest retrieval quality suite (15 tests)
-|-- docs/
-|   |-- generate_report.py   # ReportLab PDF generator
-|   |-- DEPLOYMENT.md        # Step-by-step deployment guide
-|   `-- capstone_report.pdf  # Generated 4-5 page report
 |-- app.py                   # Streamlit UI entry point
 |-- requirements.txt
 |-- Procfile                 # Web start command (Render/Procfile platforms)
